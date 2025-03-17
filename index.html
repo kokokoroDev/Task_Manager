@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dragging {
+            opacity: 0.5;
+            transform: scale(0.98);
+        }
+        .drop-target {
+            border-top: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen bg-[#2B2B2B] ">
+    <header class="flex justify-between h-1 w-full items-center px-4 py-8 bg-[#212020] text-white">
+        <h3 class="font-bold text-lg">Task Manager</h3>
+        <nav>
+            <ul class="flex justify-between items-center">
+                <li>Export</li>
+                <li>
+                    <button id="filterButton" class="px-4 py-2 rounded">Filter ▼</button>
+                    <div id="filterDropdown" class="z-10 text-black absolute mt-1 right-2 w-48 bg-white hidden shadow-lg rounded p-4">
+                        <h4 class="font-bold text-lg">Task Filters</h4>
+                        <h5 class="mt-2 font-semibold">Progress</h5>
+                        <ul class="mt-1 space-y-2">
+                            <li>
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="Incomplete" class="accent-red-500">
+                                    <span>Incomplete</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="flex items-center space-x-2">
+                                    <input type="checkbox" id="Completed" class="accent-green-500">
+                                    <span>Completed</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="flex items-center justify-center px-4 py-8 bg-[#2B2B2B] w-full gap-2 " >
+        <input type="text" id="Task" placeholder="Write Your Task" class=" rounded bg-gray-100 text-black outline-0 border-0 pl-2 py-1  pr-16 ">
+        <button id="addtask" class="px-4 bg-white font-bold flex rounded text-2xl">+</button>
+
+    </div>
+    <div id="container" class="flex-1 flex-col bg-[#2B2B2B] w-full px-4 mt-4 " >       
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
