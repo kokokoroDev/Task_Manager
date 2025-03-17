@@ -8,7 +8,6 @@ A simple **Task Manager Web App** built with **HTML**, **CSS (Tailwind CSS)**, a
 - ✅ **Add, Edit, and Delete Tasks**
 - ✅ **Mark Tasks as Completed**
 - ✅ **Filter Tasks by Status** (All, Completed, Incomplete)
-- ✅ **Dark Mode Toggle**
 - ✅ **Store Tasks in Local Storage** for persistence after page reloads
 
 ---
